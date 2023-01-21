@@ -5,8 +5,24 @@
     box-sizing: border-box;
 }
 body,html{
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0px auto;
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+}
+.user-name > p:nth-child(1){
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.user-name > p:nth-child(2){
+    opacity: 50%;
 }
 :root{
     --Moderate_violet: hsl(263, 55%, 52%);
@@ -15,4 +31,79 @@ body,html{
     --White: hsl(0, 0%, 100%);
     --Light_gray: hsl(0, 0%, 81%);
     --Light_grayish_blue: hsl(210, 46%, 95%);
+}
+.grid{
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+}
+main{
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(2,auto);
+    gap: 1rem;
+    grid-template-areas: 
+    'd d j k'
+    'je p p k';
+}
+.user-detail{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.user-logo{
+    margin-right: 1rem;
+    max-width: 3rem;
+}
+.testimonial-1{
+    grid-area: d;
+    background-color: var(--Moderate_violet);
+    color: var(--White);
+}
+.testimonial-1{
+    color: var(--Light_gray);
+}
+.testimonial-2{
+    grid-area: j;
+    background-color: var(--Very_dark_grayish_blue);
+    color: var(--White);
+}
+.testimonial-2 > p{
+    color: var(--Light_gray);
+}
+.testimonial-3{
+    grid-area: je;
+}
+.testimonial-4{
+    grid-area: p;
+    background-color: var(--Very_dark_blackish_blue);
+    color: var(--White);
+}
+.testimonial-4 > p{
+    color: var(--Light_gray);
+}
+.testimonial-5{
+    grid-area: k;
+}
+.user-content > p{
+    font-family: sans-serif;
+    margin-top: 1rem;
+    font-size: 1.1em;
+    opacity: 70%;
+}
+@media screen and (max-width:1000px) {
+    main{
+        max-width: 70vw;
+        grid-template-columns : repeat(1,auto);
+        grid-template-rows : repeat(auto-fit,auto);
+        grid-template-areas: 
+        'd'
+        'd'
+        'j'
+        'je'
+        'p'
+        'p'
+        'k'
+        'k'
+}
 }
