@@ -91,6 +91,10 @@ main{
     font-size: 1.1em;
     opacity: 70%;
 }
+footer{
+    margin-top: 10px;
+    text-align: center;
+}
 @media screen and (max-width:1000px) {
     main{
         max-width: 70vw;
