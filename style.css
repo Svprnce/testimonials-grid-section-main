@@ -97,6 +97,7 @@ footer{
 }
 @media screen and (max-width:1000px) {
     main{
+        margin: 10px;
         max-width: 90vw;
         grid-template-columns : repeat(1,auto);
         grid-template-rows : repeat(auto-fit,auto);
